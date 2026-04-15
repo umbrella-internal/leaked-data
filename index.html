@@ -2,120 +2,9 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Fake Instagram</title>
-<style>
-body {
-    font-family: Arial;
-    background: #fafafa;
-    margin: 0;
-}
-
-.container {
-    max-width: 500px;
-    margin: auto;
-}
-
-/* LISTA PROFILI */
-.profile-list {
-    padding: 10px;
-}
-
-.profile-card {
-    background: white;
-    padding: 10px;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.profile-card img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-/* PROFIL */
-.profile-info {
-    background: white;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.profile-top {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.profile-top img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-
-.profile-stats {
-    display: flex;
-    gap: 15px;
-}
-
-.profile-name {
-    font-weight: bold;
-}
-
-.bio {
-    margin-top: 10px;
-}
-
-/* POST */
-.post {
-    background: white;
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-
-.post-header {
-    padding: 10px;
-    font-weight: bold;
-}
-
-.post img {
-    width: 100%;
-}
-
-.post-content {
-    padding: 10px;
-}
-
-.likes {
-    font-weight: bold;
-}
-
-/* BACK BUTTON */
-.back-btn {
-    margin: 10px;
-    cursor: pointer;
-    color: #3897f0;
-    font-weight: bold;
-}
-
-.comment {
-    margin-top: 5px;
-    font-size: 0.9em;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-}
-
-.logo img {
-    height: 100px;
-}
-</style>
+<title>Banditly</title>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -125,12 +14,10 @@ body {
         <img src="logo.png" alt="logo">
     </div>
 
-    <!-- LISTA PROFILI -->
     <div id="profileList" class="profile-list"></div>
 
-    <!-- WIDOK PROFILU -->
     <div id="profileView" style="display:none;">
-        <div class="back-btn" onclick="goBack()">← Powrót</div>
+        <div class="back-btn" onclick="goBack()">← Back</div>
         <div id="profileInfo"></div>
         <div id="feed"></div>
     </div>
@@ -139,53 +26,58 @@ body {
 
 <script>
 const data = {
-    "Anna": {
-        avatar: "https://i.pravatar.cc/100?img=1",
-        bio: "✈️ Podróże | 📍 Świat",
-        followers: 1200,
-        following: 300,
+    "@jack_the_slayer": {
+        avatar: "photos/jack_post1.jpg",
+        bio: "its yaaa boooooy JackTheSlayer666🤙",
+        followers: "23.6k",
+        following: "1.4k",
         posts: [
-            {img: "https://picsum.photos/500?1", desc: "Włochy ❤️", likes: 120},
-            {img: "https://picsum.photos/500?2", desc: "Kawa ☕", likes: 45, comments: [
-                {user: "Jan", text: "Ale super! 🔥"},
-                {user: "Kasia", text: "Zazdro 😍"}
+            {img: "photos/jack_post1.jpg", desc: "yo whoever hacked me <br> DM me <br> you have good taste in games", likes: "1.6k", date: "1998-09-14 21:29"},
+            {img: "photos/jack_post2.jpg", desc: "im telling you guys <br> theyre doing something evil in there", likes: "1.2k", date: "1998-09-15 13:32"}            
+        ]
+    },
+    "@kate_science_lab": {
+        avatar: "photos/kate_post1.jpg",
+        bio: "Scientist at Umbrella Corporation®",
+        followers: "5.1k",
+        following: 109,
+        posts: [
+            {img: "photos/kate_post1.jpg", desc: "I don't even want to know how someone got access to the papers from my first experiment... <br> But I would look out if I were you", likes: 583, date: "1998-09-14 16:09"},
+            {img: "photos/kate_post2.jpg", desc: "Another boring day at work", likes: 651, date: "1998-09-15 13:56"}
+        ]
+    },
+    "@maria_news": {
+        avatar: "photos/maria_post2.jpg",
+        bio: "Your favourite journalist 📰😘❤️💕",
+        followers: "1.3mln",
+        following: 583,
+        posts: [
+            {img: "photos/maria_post1.jpg", desc: "WHICH ONE OF YOU GOT MY REAL NAME AND DATE OF BIRTH???<br> IM COMING FOR YOU", likes: "85.2k", date: "1998-09-14 13:47"},
+            {img: "photos/maria_post2.jpg", desc: "Anyway, new account! Your favourite journalist is back 😘😘😘", likes: "101.5k", date: "1998-09-14 13:51"}
+        ]
+    },
+    "@policeman_arthur": {
+        avatar: "photos/arthur_post1.jpg",
+        bio: "Raccoon Police Department Officer 🚓👮‍♂️🫡",
+        followers: 1245,
+        following: "15.3k",
+        posts: [
+            {img: "photos/arthur_post1.jpg", desc: "New account.<br> But how did you know my special order with the exact amount of milk I use?", likes: 120, date: "1998-09-14 12:33"},
+            {img: "photos/arthur_post2.jpg", desc: "Guys, you need to stop using your pet names and it's date of birth for passwords. <br> Any objects and numbers really.", likes: 552, date: "1998-09-15 10:21", comments: [
+                {user: "@jack_the_slayer", text: "like youre better"},
+                {user: "@maria_news", text: "Have you even managed to find the culprit?"},
+                {user: "@granny_donna", text: "👍"}
             ]}
         ]
     },
-    "Jan": {
-        avatar: "https://i.pravatar.cc/100?img=2",
-        bio: "💪 Fitness",
-        followers: 980,
-        following: 150,
+    "@granny_donna": {
+        avatar: "photos/donna_post1.jpg",
+        bio: "Hello, I'm granny Donna. 🙂",
+        followers: "83.9k",
+        following: 5,
         posts: [
-            {img: "https://picsum.photos/500?3", desc: "Trening 💪", likes: 88}
-        ]
-    },
-    "Kasia": {
-        avatar: "https://i.pravatar.cc/100?img=3",
-        bio: "✨ Lifestyle",
-        followers: 1500,
-        following: 400,
-        posts: [
-            {img: "https://picsum.photos/500?4", desc: "OOTD ✨", likes: 67}
-        ]
-    },
-    "Michał": {
-        avatar: "https://i.pravatar.cc/100?img=4",
-        bio: "💻 Tech",
-        followers: 2000,
-        following: 500,
-        posts: [
-            {img: "https://picsum.photos/500?5", desc: "Setup 💻", likes: 150}
-        ]
-    },
-    "Ola": {
-        avatar: "logo.png",
-        bio: "📷 Fotografia",
-        followers: 1700,
-        following: 350,
-        posts: [
-            {img: "https://picsum.photos/500?6", desc: "Zdjęcie dnia 📷", likes: 99}
+            {img: "photos/donna_post1.jpg", desc: "New account", likes: "5.7k", date: "1998-09-15 10:15"},
+            {img: "photos/donna_post2.jpg", desc: "For the people asking what happend, the police came and said that I've been 'hacked'. My password was apparently too weak, but the nice policeman helped me with the new password. ☺️", likes: "7.2k", date: "1998-09-15 11:34"}
         ]
     }
 };
@@ -195,7 +87,6 @@ const profileViewDiv = document.getElementById("profileView");
 const profileInfoDiv = document.getElementById("profileInfo");
 const feedDiv = document.getElementById("feed");
 
-// render listy
 function renderList() {
     profileListDiv.innerHTML = "";
 
@@ -219,7 +110,6 @@ function renderList() {
     });
 }
 
-// otwarcie profilu
 function openProfile(userName) {
     const profile = data[userName];
 
@@ -228,16 +118,20 @@ function openProfile(userName) {
 
     profileInfoDiv.innerHTML = `
         <div class="profile-info">
-            <div class="profile-top">
+            <div class="profile-row">
                 <img src="${profile.avatar}">
-                <div class="profile-stats">
-                    <div><b>${profile.posts.length}</b> posty</div>
-                    <div><b>${profile.followers}</b> obserwujący</div>
-                    <div><b>${profile.following}</b> obserwowani</div>
+                
+                <div class="profile-details">
+                    <div class="profile-name">${userName}</div>
+                    <div class="bio">${profile.bio}</div>
+
+                    <div class="profile-stats">
+                        <div><b>${profile.posts.length}</b> posts</div>
+                        <div><b>${profile.followers}</b> followers</div>
+                        <div><b>${profile.following}</b> following</div>
+                    </div>
                 </div>
             </div>
-            <div class="profile-name">${userName}</div>
-            <div class="bio">${profile.bio}</div>
         </div>
     `;
 
@@ -246,7 +140,6 @@ function openProfile(userName) {
         const postDiv = document.createElement("div");
         postDiv.className = "post";
 
-        // generowanie komentarzy
         let commentsHTML = "";
         if (post.comments) {
             post.comments.forEach(c => {
@@ -255,10 +148,13 @@ function openProfile(userName) {
         }
 
         postDiv.innerHTML = `
-            <div class="post-header">${userName}</div>
+            <div class="post-header">
+                ${userName}
+                <div class="date">${post.date}</div>
+            </div>
             <img src="${post.img}">
             <div class="post-content">
-                <div class="likes">${post.likes} polubień</div>
+                <div class="likes">${post.likes} likes</div>
                 <div>${post.desc}</div>
                 ${commentsHTML}
             </div>
@@ -268,7 +164,6 @@ function openProfile(userName) {
     });
 }
 
-// powrót
 function goBack() {
     profileViewDiv.style.display = "none";
     profileListDiv.style.display = "block";
