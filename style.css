@@ -1,6 +1,7 @@
 body {
     font-family: Arial;
-    background-image: linear-gradient(to bottom, #66E053, #154882, #000000);
+    background: #000000;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(130, 21, 21, 1) 50%, rgba(0, 0, 0, 1) 100%);
     margin: 0;
     min-height: 100vh;
     overflow-x: hidden;
@@ -108,7 +109,7 @@ body {
 .back-btn {
     margin: 10px;
     cursor: pointer;
-    color: black;
+    color: white;
     font-weight: bold;
     position: relative;
     z-index: 999;
@@ -145,7 +146,7 @@ body {
   content: attr(data-text);
   position: absolute;
   left: -2px;
-  text-shadow: -5px 0 magenta;
+  text-shadow: -5px 0 rgb(71, 246, 31);
   overflow: hidden;
   top: 0;
   animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
@@ -155,7 +156,7 @@ body {
   content: attr(data-text);
   position: absolute;
   left: 2px;
-  text-shadow: -5px 0 lightgreen;
+  text-shadow: -5px 0 rgb(255, 0, 157);
   overflow: hidden;
   top: 0;
   animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
