@@ -35,13 +35,24 @@ const data = {
             {img: "photos/oz_post1.jpg", desc: "yo whoever hacked me <br> DM me <br> you have good taste in games", likes: "1.6k", date: "1998-09-14 21:29"},
             {img: "photos/oz_post2.jpg", desc: "im telling you guys <br> theyre doing something evil in there", likes: "1.2k", date: "1998-09-15 13:32"},
             {img: "photos/oz_post3.jpg", desc: "beware here i come to beat you all", likes: "3.7k", date: "1998-09-17 11:07"},
-            {img: "photos/oz_post4.jpg", desc: "who orders a coffe with exacly 275 ml of milk <br> and calls it 'Cloudy'🤣🤣🤣", likes: "10.8k", date: "1998-09-17 14:25"},
+            {img: "photos/oz_post4.jpg", desc: "who orders a coffe with exacly 275 ml of milk <br> and calls it 'Cloudy'🤣🤣🤣", likes: "10.8k", date: "1998-09-17 14:25", comments: [
+                {user: "@policeman_sam", text: "You wouldn't be laughing if you tried."},
+                {user: "@oz_the_slayer", text: "hell nah"}
+            ]},
             {img: "photos/oz_post5.jpg", desc: "finally got one <br> you jealous?", likes: "8.1k", date: "1998-09-18 21:42"},
-            {img: "photos/oz_post6.jpg", desc: "time to annoy the old hag😈", likes: "13.9k", date: "1998-09-20 20:59"},
-            {img: "photos/oz_post7.jpg", desc: "life behind the bars", likes: "26.0k", date: "1998-09-20 22:35"},
+            {img: "photos/oz_post6.jpg", desc: "time to annoy the old hag", likes: "13.9k", date: "1998-09-20 20:59"},
+            {img: "photos/oz_post7.jpg", desc: "life behind the bars", likes: "26.0k", date: "1998-09-20 22:35", comments: [
+                {user: "@maria_news", text: "🤣"},
+                {user: "@policeman_sam", text: "Don't overreact."}
+            ]},
             {img: "photos/oz_post8.jpg", desc: "the best instant soup ever!", likes: "7.4k", date: "1998-09-22 18:10"},
-            {img: "photos/oz_post9.jpg", desc: "me trying to have educated disscusion about games but people are just so dense😩", likes: "10.2k", date: "1998-09-24 23:08"},
-            {img: "photos/oz_post10.jpg", desc: "i think i exaggerated a bit...", likes: "21.7k", date: "1998-09-25 02:51"},
+            {img: "photos/oz_post9.jpg", desc: "me trying to have educated disscusion about games but people are just so dense😩", likes: "10.2k", date: "1998-09-24 23:08", comments: [
+                {user: "@kate_science_lab", text: "You were the one yelling and calling everybody idiots"},
+                {user: "@oz_the_slayer", text: "because its true"}
+            ]},
+            {img: "photos/oz_post10.jpg", desc: "i think i exaggerated a bit...", likes: "21.7k", date: "1998-09-25 02:51", comments: [
+                {user: "@kate_science_lab", text: "lol"}
+            ]},
             {img: "photos/oz_post11.jpg", desc: "hell yeah", likes: "11.5k", date: "1998-09-26 10:04"},
             {img: "photos/oz_post12.jpg", desc: "nothing is better than ragebaiting random people on the internet 🤌<br> change my mind", likes: "17.2k", date: "1998-09-27 17:16"},
             {img: "photos/oz_post13.jpg", desc: "tf is happening in the city", likes: "6.5k", date: "1998-09-28 23:28"},
@@ -60,10 +71,15 @@ const data = {
             {img: "photos/kate_post3.jpg", desc: "The journalist is here again...", likes: "3.5k", date: "1998-09-16 12:03"},
             {img: "photos/kate_post4.jpg", desc: "Mulitbillion company by the way", likes: "1.2k", date: "1998-09-18 13:26"},
             {img: "photos/kate_post5.jpg", desc: "That's more like it", likes: 842, date: "1998-09-18 17:57"},
-            {img: "photos/kate_post6.jpg", desc: "My new experiment is a success", likes: 927, date: "1998-09-21 11:46"},
+            {img: "photos/kate_post6.jpg", desc: "My new experiment is a success", likes: 927, date: "1998-09-21 11:46", comments: [
+                {user: "@maria_news", text: "Care to elaborate?🧐"},
+                {user: "@kate_science_lab", text: "No"}
+            ]},
             {img: "photos/kate_post7.jpg", desc: "I received a mug as a reward... Another one", likes: "1.0k", date: "1998-09-21 15:54"},
             {img: "photos/kate_post8.jpg", desc: "Neighborhood monitoring", likes: "1.6k", date: "1998-09-23 10:40"},
-            {img: "photos/kate_post9.jpg", desc: "I played with a guy who kept saying that Doom from 1993 is the best game ever created", likes: 891, date: "1998-09-24 23:12"},
+            {img: "photos/kate_post9.jpg", desc: "I played with a guy who kept saying that Doom from 1993 is the best game ever created", likes: 891, date: "1998-09-24 23:12", comments: [
+                {user: "@jack_the_slayer", text: "and hes right"}
+            ]},
             {img: "photos/kate_post10.jpg", desc: "They make everyone work without exceptions", likes: 582, date: "1998-09-25 09:28"},
             {img: "photos/kate_post11.jpg", desc: "Just announced that we have to work at nights now", likes: 773, date: "1998-09-26 16:05"},
             {img: "photos/kate_post12.jpg", desc: "And why the only open cafe is in the neighboring town?", likes: 916, date: "1998-09-26 23:47"},
@@ -81,15 +97,33 @@ const data = {
             {img: "photos/maria_post1.jpg", desc: "WHICH ONE OF YOU GOT MY REAL NAME AND DATE OF BIRTH???<br> IM COMING FOR YOU", likes: "85.2k", date: "1998-09-14 13:47"},
             {img: "photos/maria_post2.jpg", desc: "Anyway, new account! Your favourite journalist is back 😘😘😘", likes: "101.5k", date: "1998-09-14 13:51"},
             {img: "photos/maria_post3.jpg", desc: "Hard to get anything from these 'scientists'😒...", likes: "598.2k", date: "1998-09-16 12:24"},
-            {img: "photos/maria_post4.jpg", desc: "but I managed to get something anyway!😏", likes: "705.2k", date: "1998-09-16 12:27"},
-            {img: "photos/maria_post5.jpg", desc: "I don't think there any relevant information in here", likes: "627.1k", date: "1998-09-19 06:48"},
-            {img: "photos/maria_post6.jpg", desc: "But don't worry guys, I'm not giving up yet. I'm gonna get them one day!💪", likes: "481.7k", date: "1998-09-19 12:12"},
-            {img: "photos/maria_post7.jpg", desc: "✨Fit check✨", likes: "285.1k", date: "1998-09-21 10:45"},
-            {img: "photos/maria_post8.jpg", desc: "Can anyone relate to two homeless people fighting over who will sell information today?", likes: "768.5k", date: "1998-09-23 16:05"},
+            {img: "photos/maria_post4.jpg", desc: "but I managed to get something anyway!😏", likes: "705.2k", date: "1998-09-16 12:27", comments: [
+                {user: "@policeman_sam", text: "Did you just stole that?"},
+                {user: "@maria_news", text: "No, I just borrewed it😇"},
+                {user: "@policeman_sam", text: "Oh, ok."},
+                {user: "@kate_science_lab", text: "You're letting that slide?!"}
+            ]},
+            {img: "photos/maria_post5.jpg", desc: "I don't think there any relevant information in here", likes: "627.1k", date: "1998-09-19 06:48", comments: [
+                {user: "@kate_science_lab", text: "You really think we kept important documents at the front desk?"},
+                {user: "@maria_news", text: "Who knows? It's darkest under the lamp"}
+            ]},
+            {img: "photos/maria_post6.jpg", desc: "But don't worry guys, I'm not giving up yet. I'm gonna get them one day!💪", likes: "481.7k", date: "1998-09-19 12:12", comments: [
+                {user: "@kate_science_lab", text: "God, give me strength"}
+            ]},
+            {img: "photos/maria_post7.jpg", desc: "✨Fit check✨", likes: "285.1k", date: "1998-09-21 10:45", comments: [
+                {user: "@granny_ellie", text: "You look lovely sweetie. 🥰"}
+            ]},
+            {img: "photos/maria_post8.jpg", desc: "Can anyone relate to two homeless people fighting over who will sell information today?", likes: "768.5k", date: "1998-09-23 16:05", comments: [
+                {user: "@jack_the_slayer", text: "no?"},
+                {user: "@policeman_sam", text: "Have they stopped fighting?"}
+            ]},
             {img: "photos/maria_post9.jpg", desc: "I didn't learn anything new today, time to go back to reading the newspapers😭", likes: "174.6k", date: "1998-09-23 18:49"},
             {img: "photos/maria_post10.jpg", desc: "Sometimes you have to ask at the source", likes: "423.7k", date: "1998-09-25 14:18"},
             {img: "photos/maria_post11.jpg", desc: "Of course, I learned nothing again. Time for coffee☕️", likes: "374.8k", date: "1998-09-27 12:26"},
-            {img: "photos/maria_post12.jpg", desc: "For those asking, Grandma is doing well and she quite took a liking in these 'social media'", likes: "592.6k", date: "1998-09-27 14:41"},
+            {img: "photos/maria_post12.jpg", desc: "For those asking, Grandma is doing well and she quite took a liking in these 'social media'", likes: "592.6k", date: "1998-09-27 14:41", comments: [
+                {user: "@granny_ellie", text: "I'm rocking it baby. 😎"},
+                {user: "@maria_news", text: "Grandma, no"}
+            ]},
             {img: "photos/maria_post13.jpg", desc: "The company is getting an awful lot of complaints. I have a bad feeling.", likes: "392.1k", date: "1998-09-28 10:12"},
             {img: "photos/maria_post14.jpg", desc: "What's happening to people? Why is everyone running away?", likes: "782.9k", date: "1998-09-29 13:47"},
             {img: "photos/maria_post15.jpg", desc: "HELP", likes: "959.3k", date: "1998-09-30 13:47"}
@@ -111,10 +145,19 @@ const data = {
             {img: "photos/sam_post4.jpg", desc: "Time for some well deserved coffee.", likes: 125, date: "1998-09-17 14:21"},
             {img: "photos/sam_post5.jpg", desc: "Another day, another patrol.", likes: 164, date: "1998-09-19 07:56"},
             {img: "photos/sam_post6.jpg", desc: "Eh, another disturbance call from our favorite customer...", likes: 294, date: "1998-09-20 21:17"},
-            {img: "photos/sam_post7.jpg", desc: "Problem in his favourite cell.", likes: 635, date: "1998-09-20 22:44"},
+            {img: "photos/sam_post7.jpg", desc: "Problem in his favourite cell.", likes: 635, date: "1998-09-20 22:44", comments: [
+                {user: "@jack_the_slayer", text: "can i get out now?"},
+                {user: "@policeman_sam", text: "Few more hours."},
+                {user: "@granny_ellie", text: "🤣🤣🤣"}
+            ]},
             {img: "photos/sam_post8.jpg", desc: "Calm night in our city.", likes: 198, date: "1998-09-23 23:20"},
-            {img: "photos/sam_post9.jpg", desc: "Always remember to help elders kids.", likes: 374, date: "1998-09-24 08:07"},
-            {img: "photos/sam_post10.jpg", desc: "I see that a frequent guest visited us.", likes: 823, date: "1998-09-25 14:28"},
+            {img: "photos/sam_post9.jpg", desc: "Always remember to help elders kids.", likes: 374, date: "1998-09-24 08:07", comments: [
+                {user: "@jack_the_slayer", text: "🙄"}
+            ]},
+            {img: "photos/sam_post10.jpg", desc: "I see that a frequent guest visited us.", likes: 823, date: "1998-09-25 14:28", comments: [
+                {user: "@maria_news", text: "And you never tell me something useful😩"},
+                {user: "@policeman_sam", text: "Because it's classified..."}
+            ]},
             {img: "photos/sam_post11.jpg", desc: "So many papers...", likes: 97, date: "1998-09-26 17:27"},
             {img: "photos/sam_post12.jpg", desc: "There have been a lot of accidents in the area lately. This doesn't bode well.", likes: 175, date: "1998-09-27 22:54"},
             {img: "photos/sam_post13.jpg", desc: "We're getting an awful lot of calls. What's going on?", likes: 286, date: "1998-09-28 12:33"},
@@ -130,16 +173,26 @@ const data = {
         posts: [
             {img: "photos/ellie_post1.jpg", desc: "New account.", likes: "5.7k", date: "1998-09-15 10:15"},
             {img: "photos/ellie_post2.jpg", desc: "For the people asking what happend, the police came and said that I've been 'hacked'. My password was apparently too weak, but the nice policeman helped me with the new password. ☺️", likes: "7.2k", date: "1998-09-15 11:34"},
-            {img: "photos/ellie_post3.jpg", desc: "Look at my sweet granddaughter☺️.", likes: "14.6k", date: "1998-09-16 09:58"},
+            {img: "photos/ellie_post3.jpg", desc: "Look at my sweet granddaughter☺️.", likes: "14.6k", date: "1998-09-16 09:58", comments: [
+                {user: "@maria_news", text: "Grandma, I toldy you to stop posting my photos online😩"},
+                {user: "@granny_ellie", text: "But you were so cute back then. 🥺"}
+            ]},
             {img: "photos/ellie_post4.jpg", desc: "Perfect day for some knitting.", likes: "13.7k", date: "1998-09-18 15:29"},
-            {img: "photos/ellie_post5.jpg", desc: "Fill patrolling the city on his 5th birthday😸.", likes: "37.1k", date: "1998-09-19 14:46"},
+            {img: "photos/ellie_post5.jpg", desc: "Fill patrolling the city on his 5th birthday😸.", likes: "37.1k", date: "1998-09-19 14:46", comments: [
+                {user: "@maria_news", text: "Happy birthday Fill🥳"},
+                {user: "@policeam_sam", text: "Happy birthday buddy 🫡"}
+            ]},
             {img: "photos/ellie_post6.jpg", desc: "That brat is cousing racket again.", likes: "65.2k", date: "1998-09-20 21:09"},
             {img: "photos/ellie_post7.jpg", desc: "Time for some good old music🎶.", likes: "24.6k", date: "1998-09-22 17:34"},
-            {img: "photos/ellie_post8.jpg", desc: "They're doing something suspicious again in this damn company.", likes: "37.1k", date: "1998-09-23 10:32"},
+            {img: "photos/ellie_post8.jpg", desc: "They're doing something suspicious again in this damn company.", likes: "37.1k", date: "1998-09-23 10:32", comments: [
+                {user: "@kate_science_lab", text: "I feel like you have too much free time"}
+            ]},
             {img: "photos/ellie_post9.jpg", desc: "We have a wonderful police force in this city😊. They are so helpful.", likes: "25.9k", date: "1998-09-24 08:37"},
             {img: "photos/ellie_post10.jpg", desc: "My new creation.", likes: "26.3k", date: "1998-09-25 13:46"},
             {img: "photos/ellie_post11.jpg", desc: "Fill chewed my plants again. Crazy cat.", likes: "18.4k", date: "1998-09-26 12:15"},
-            {img: "photos/ellie_post12.jpg", desc: "Guess who visited me?", likes: "57.3k", date: "1998-09-27 13:18"},
+            {img: "photos/ellie_post12.jpg", desc: "Guess who visited me?", likes: "57.3k", date: "1998-09-27 13:18", comments: [
+                {user: "@maria_news", text: "It's lovely, thanky you grandma🥰"}
+            ]},
             {img: "photos/ellie_post13.jpg", desc: "Why is it so noisy in the city today🤨?", likes: "41.8k", date: "1998-09-28 22:21"},
             {img: "photos/ellie_post14.jpg", desc: "Have these young people gone crazy or what😠?", likes: "72.4k", date: "1998-09-29 21:39"},
             {img: "photos/ellie_post15.jpg", desc: "Oh my G...", likes: "126.2k", date: "1998-09-30 14:14"}
@@ -227,11 +280,6 @@ function openProfile(userName) {
 
     feedDiv.appendChild(postDiv);
     });
-
-    feedDiv.innerHTML += `
-        <div class="glitch" data-text="ERROR_404">ERROR_404</div>
-        <div class="glow">ERROR_404</div>
-    `;
 }
 
 function goBack() {
